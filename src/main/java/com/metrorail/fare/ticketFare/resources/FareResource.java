@@ -20,11 +20,11 @@ public class FareResource {
     FareService fareService;
 
     @RequestMapping(method = RequestMethod.POST,
-            value = "getFare",
+            value = "getFare/{cardId}",
             produces = MediaType.APPLICATION_JSON_VALUE,
             consumes = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    public ResponseEntity getFare(@PathVariable int cardId,
+    public ResponseEntity getFare(@PathVariable("cardId") int cardId,
                                   @RequestBody List<Journey> journeys) {
         int fare = fareService.getFare(cardId, journeys);
         return new ResponseEntity(fare, HttpStatus.OK);

@@ -3,14 +3,12 @@ package com.metrorail.fare.ticketFare.services.impl;
 import com.metrorail.fare.ticketFare.entities.Journey;
 import com.metrorail.fare.ticketFare.entities.TigerCard;
 import com.metrorail.fare.ticketFare.services.FareService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 
 @Component
 public class FareServiceImpl extends FareService {
-    @Autowired
     TigerCard card;
 
     @Override

@@ -1,5 +1,7 @@
-API : http://localhost:8080/metro-rail/getFare/4578
+# API : http://localhost:8080/metro-rail/getFare/4578
+
 Request Body :
+
 [
 	{
 		"fromZone" : {"zoneId" : 1, "zoneName" : "A"},

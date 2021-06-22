@@ -7,5 +7,5 @@ import java.util.List;
 
 @Service
 public abstract class FareService {
-    public abstract int getFare(List<Journey> journeyList);
+    public abstract int getFare(int cardId, List<Journey> journeyList);
 }

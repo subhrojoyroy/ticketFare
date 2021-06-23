@@ -14,7 +14,7 @@ import java.util.List;
 
 public class TigerCard implements Card {
     @Autowired
-    Gson gson;
+    Gson gson = new Gson();
     private Journey[] journeys;
     int cardId;
 

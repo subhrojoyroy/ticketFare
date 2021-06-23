@@ -1,0 +1,64 @@
+[
+  {
+    "cardId": 123,
+    "journeys": [
+      {
+        "fromZone": {
+          "zoneId": 1,
+          "zoneName": "A"
+        },
+        "toZone": {
+          "zoneId": 2,
+          "zoneName": "B"
+        },
+        "fromTime": "2021-06-21T09:35:00",
+        "toTime": "2021-06-21T10:25:00",
+        "day": "Monday"
+      },
+      {
+        "fromZone": {
+          "zoneId": 2,
+          "zoneName": "B"
+        },
+        "toZone": {
+          "zoneId": 1,
+          "zoneName": "A"
+        },
+        "fromTime": "2021-06-21T17:15:00",
+        "toTime": "2021-06-21T18:05:00",
+        "day": "Monday"
+      }
+    ]
+  },
+  {
+    "cardId": 456,
+    "journeys": [
+      {
+        "fromZone": {
+          "zoneId": 1,
+          "zoneName": "AA"
+        },
+        "toZone": {
+          "zoneId": 1,
+          "zoneName": "A"
+        },
+        "fromTime": "2021-06-21T09:35:00",
+        "toTime": "2021-06-21T10:25:00",
+        "day": "Monday"
+      },
+      {
+        "fromZone": {
+          "zoneId": 1,
+          "zoneName": "A"
+        },
+        "toZone": {
+          "zoneId": 1,
+          "zoneName": "AA"
+        },
+        "fromTime": "2021-06-21T17:15:00",
+        "toTime": "2021-06-21T18:05:00",
+        "day": "Monday"
+      }
+    ]
+  }
+]

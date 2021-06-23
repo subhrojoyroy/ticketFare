@@ -1,6 +1,7 @@
 package com.metrorail.fare.ticketFare.resources;
 
 import com.metrorail.fare.ticketFare.entities.Journey;
+import com.metrorail.fare.ticketFare.exception.FareException;
 import com.metrorail.fare.ticketFare.services.FareService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
@@ -26,7 +27,12 @@ public class FareResource {
     @ResponseBody
     public ResponseEntity getFare(@PathVariable("cardId") int cardId,
                                   @RequestBody List<Journey> journeys) {
-        int fare = fareService.getFare(cardId, journeys);
+        int fare = 0;
+        try {
+            fare = fareService.getFare(cardId, journeys);
+        } catch(FareException e) {
+            new ResponseEntity(e, HttpStatus.EXPECTATION_FAILED);
+        }
         return new ResponseEntity(fare, HttpStatus.OK);
     }
 }
